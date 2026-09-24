@@ -1,0 +1,292 @@
+/* ==========================================================================
+   AMRITHA SANJIV - EDITORIAL PORTFOLIO RESPONSIVE BREAKPOINTS
+   Fluid Adaptability for Desktop, Tablet, and Mobile
+   ========================================================================== */
+
+/* Large Tablets & Small Laptops (max-width: 1100px) */
+@media (max-width: 1100px) {
+  .hero-grid {
+    grid-template-columns: 1fr;
+    gap: 3.5rem;
+  }
+
+  .hero-portrait-wrap {
+    order: -1;
+  }
+
+  .portrait-frame {
+    max-width: 360px;
+    height: 480px;
+  }
+
+  .what-i-do-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+
+  .projects-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .process-pipeline {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+  }
+
+  .process-pipeline::before {
+    display: none;
+  }
+
+  .skills-groups {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .demo-grid {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+}
+
+/* Tablets (max-width: 860px) */
+@media (max-width: 860px) {
+  .editorial-topbar {
+    display: none;
+  }
+
+  .nav-links {
+    position: fixed;
+    top: 75px;
+    left: 0;
+    right: 0;
+    background: rgba(15, 5, 10, 0.98);
+    backdrop-filter: blur(20px);
+    flex-direction: column;
+    padding: 2.5rem 2rem;
+    gap: 1.5rem;
+    border-bottom: 1px solid var(--border-light);
+    transform: translateY(-150%);
+    opacity: 0;
+    pointer-events: none;
+    transition: var(--transition-smooth);
+    z-index: 85;
+  }
+
+  .nav-links.active {
+    transform: translateY(0);
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  .mobile-menu-toggle {
+    display: flex;
+  }
+
+  .mobile-menu-toggle.active span:nth-child(1) {
+    transform: translateY(7px) rotate(45deg);
+  }
+
+  .mobile-menu-toggle.active span:nth-child(2) {
+    opacity: 0;
+  }
+
+  .mobile-menu-toggle.active span:nth-child(3) {
+    transform: translateY(-7px) rotate(-45deg);
+  }
+
+  .cream-parchment-block {
+    padding: 3rem 2rem;
+  }
+
+  .cream-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.5rem;
+  }
+
+  .two-col-grid, .credentials-grid {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem 1.5rem;
+  }
+
+  .stat-item:nth-child(2)::after {
+    display: none;
+  }
+}
+
+/* Mobile Devices (max-width: 640px) */
+@media (max-width: 640px) {
+  .container {
+    padding: 0 1.25rem;
+  }
+
+  .nav-container {
+    padding: 1rem 1.25rem;
+  }
+
+  .nav-actions .btn-contact {
+    display: none;
+  }
+
+  .hero-section {
+    padding: 1.5rem 0 4rem;
+  }
+
+  .portrait-frame {
+    max-width: 290px;
+    height: 400px;
+  }
+
+  .rotating-badge-container {
+    width: 100px;
+    height: 100px;
+    right: -10px;
+    top: -15px;
+  }
+
+  .portrait-floating-card {
+    left: 0;
+    bottom: 10px;
+    padding: 0.6rem 1rem;
+  }
+
+  .hero-script-phrase {
+    font-size: 1.8rem;
+  }
+
+  .hero-cta-group {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.8rem;
+  }
+
+  .btn-primary-editorial, .btn-outline-editorial {
+    justify-content: center;
+  }
+
+  .nav-actions {
+    gap: 0.5rem;
+  }
+
+  .btn-inbox-nav {
+    padding: 0.5rem 0.8rem;
+    font-size: 0.72rem;
+  }
+
+  .btn-resume {
+    padding: 0.5rem 0.85rem;
+    font-size: 0.72rem;
+  }
+
+  .btn-contact {
+    padding: 0.5rem 0.95rem;
+    font-size: 0.72rem;
+  }
+
+  .what-i-do-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .process-pipeline {
+    grid-template-columns: 1fr;
+  }
+
+  .skills-groups {
+    grid-template-columns: 1fr;
+  }
+
+  .interactive-demo-card {
+    padding: 2rem 1.5rem;
+  }
+
+  .footer-hero-banner {
+    padding: 2.5rem 1.5rem;
+  }
+
+  .contact-form-wrap {
+    padding: 1.8rem 1.2rem;
+  }
+
+  .footer-colophon {
+    flex-direction: column;
+    gap: 1.2rem;
+    text-align: center;
+  }
+
+  .resume-modal-content {
+    padding: 2rem 1.5rem;
+  }
+
+  .resume-paper-header {
+    flex-direction: column;
+    gap: 1.2rem;
+  }
+
+  .inbox-modal-content {
+    max-height: 94vh;
+  }
+
+  .inbox-modal-header {
+    padding: 1.5rem 1.2rem 1rem;
+    gap: 0.9rem;
+  }
+
+  .inbox-header-icon {
+    width: 42px;
+    height: 42px;
+    font-size: 1.1rem;
+  }
+
+  .inbox-toolbar {
+    padding: 0.75rem 1.2rem;
+  }
+
+  .inbox-messages-list {
+    padding: 1.2rem;
+  }
+
+  .msg-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.4rem;
+  }
+}
+
+/* Print Stylesheet for Resume Modal */
+@media print {
+  body * {
+    visibility: hidden;
+  }
+  .resume-modal-content, .resume-modal-content * {
+    visibility: visible;
+  }
+  .resume-modal-content {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
+    padding: 2cm;
+    border: none;
+    box-shadow: none;
+    background: #fff !important;
+    color: #000 !important;
+  }
+  .modal-close-btn, .resume-paper-actions {
+    display: none !important;
+  }
+}
